@@ -6,6 +6,6 @@ How to reproduce:
 3. textView2 should be GONE intead of INVISIBLE.
 4. Observation: Something happening with Room and ConstraintLayout. 
 5. Solutions:
-1) Can be fixed using a LinearLayout instead of ConstraintLayout. 
-2) Can be fixed if delay 5 seconds after reading from database. 
-3) Can be fixed wrapping a FrameLayout/LinearLayout outside of textView2 (the view you want to set to GONE).
+- Can be fixed using a LinearLayout instead of ConstraintLayout. 
+- Can be fixed if delay 5 seconds after reading from database. 
+- Can be fixed wrapping a FrameLayout/LinearLayout outside of textView2 (the view you want to set to GONE).
