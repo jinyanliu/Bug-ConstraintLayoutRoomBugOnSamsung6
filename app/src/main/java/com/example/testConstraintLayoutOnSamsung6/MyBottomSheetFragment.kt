@@ -21,22 +21,12 @@ class MyBottomSheetFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        Handler().postDelayed({
-//            textView.visibility = View.GONE
-//            pager.visibility = View.GONE
-//            lineaLayout.visibility = View.GONE
-//        }, 2000)
 
         GlobalScope.launch(Dispatchers.Main) {
-
             val context = context?:return@launch
             val database = Room.databaseBuilder(context, MyDatabase::class.java, "categories.db").build()
             database.categoriesDao().getAll()
-
-            //delay(TimeUnit.SECONDS.toMillis(5))
-            //textView.visibility = View.GONE
-            //pager.visibility = View.GONE
-            //pagerInsideLinearLayout.visibility = View.GONE
+            // Bug here, reproducible at any time with a fresh installation
             textView2.visibility = View.GONE
         }
     }
