@@ -1,4 +1,4 @@
-# ConstraintLayoutRoomBugOnSamsung6
+# Bug-ConstraintLayoutRoomBugOnSamsung6
 
 How to reproduce:
 1. Get a Samsung S5 G900F 6.0.1.
